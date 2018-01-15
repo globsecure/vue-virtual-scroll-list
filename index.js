@@ -36,6 +36,7 @@
 
     return Vue2.component(namespace, {
         props: {
+            display: { type: String, default: 'block' },
             size: { type: Number, required: true },
             remain: { type: Number, required: true },
             rtag: { type: String, default: 'div' },
@@ -364,7 +365,7 @@
             return h(this.rtag, {
                 'ref': 'vsl',
                 'style': {
-                    'display': 'block',
+                    'display': this.display,
                     'overflow-y': 'auto',
                     'height': this.size * this.remain + 'px'
                 },
@@ -374,7 +375,7 @@
             }, [
                 h(this.wtag, {
                     'style': {
-                        'display': 'block',
+                        'display': this.display,
                         'padding-top': delta.paddingTop + 'px',
                         'padding-bottom': delta.paddingBottom + 'px'
                     },
