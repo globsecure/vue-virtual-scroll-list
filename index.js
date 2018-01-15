@@ -365,7 +365,6 @@
             return h(this.rtag, {
                 'ref': 'vsl',
                 'style': {
-                    'display': this.display,
                     'overflow-y': 'auto',
                     'height': this.size * this.remain + 'px'
                 },
@@ -375,7 +374,6 @@
             }, [
                 h(this.wtag, {
                     'style': {
-                        'display': this.display,
                         'padding-top': delta.paddingTop + 'px',
                         'padding-bottom': delta.paddingBottom + 'px'
                     },
